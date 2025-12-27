@@ -1,4 +1,4 @@
-# print("hello")
+#print("hello")
 
 
 
@@ -181,8 +181,8 @@
         #COMPARISON
 
 
-a=10 
-c="10"
+#a=10 
+#c="10"
 
 #print(a == c)
 
@@ -265,4 +265,7 @@ c="10"
 
 #mid = Array[Size//2]
 #print(mid)
+
+
+
 
