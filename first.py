@@ -189,6 +189,7 @@
 #after conersion of str into integer
 #print(a == int(c))
 
+
 #DataType comparison
 #print(a is c)
 
@@ -202,7 +203,7 @@
 #print(5 * 2 + int("3"))
 #print(bool("False"))
 #print(True * 10)
-# print(bool(" "))
+print(bool())
 
 
         ##KITNE SAHI THE?##
