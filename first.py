@@ -203,12 +203,10 @@
 #print(5 * 2 + int("3"))
 #print(bool("False"))
 #print(True * 10)
-print(bool())
+#print(bool())#if bol()is empty it will throw false
 
 
         ##KITNE SAHI THE?##
-
-
         #ASKING USER TO EXIT 
         #UNTILL KEEP EXECUTING A PROGRAM
 
@@ -222,7 +220,7 @@ print(bool())
     
 
     #ARRAY TOPIC
-
+ 
 #arr=[12,10.13,13123]
 #arr1=["ayush",12,34.8,True,False]
 

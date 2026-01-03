@@ -208,3 +208,26 @@
 # print(is_palindrome)
 
 
+#arr=[12,34,1,45,45,1,34,12]
+# i=0
+# while i < len(arr):
+#     j= i + 1
+#     while j<len(arr):
+#         if arr[i]==arr[j]:
+#             arr.pop(j) 
+#         else:
+#             j +=1
+#     i +=1
+# print(arr)            
+
+# arr = [10, 20, 30, 40, 50]
+# arr2=[]
+# k = 2
+# for i in range(0,2):
+#     arr2.append(arr[i]) 
+# for i in range(0,2):
+#     arr.pop(i)    
+
+# print(arr2)
+# print(arr)
+
