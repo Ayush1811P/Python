@@ -55,18 +55,19 @@
 
 
 
-locations = {
-    (28.61, 77.23): "Delhi",
-    (19.07, 72.87): "Mumbai"
-}
+# locations = {
+#     (28.61, 77.23): "Delhi",
+#     (19.07, 72.87): "Mumbai"
+# }
 
-pairs=[(1,3), (2,4), (6,5)]
+#pairs=[(1,3), (2,4), (6,5)]
 # for x in pairs:
 #     print(x)
 
 # for a,b in pairs:
 #     print(a+b)    
 
-t=(1,2,3)
-t += (4,)
-print(t)
+# t=(1,2,3)
+# t += (4,)
+# print(t)
+

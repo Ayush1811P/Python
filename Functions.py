@@ -58,8 +58,31 @@
 
 
 
+# def add(a,b):
+#     return a+b
+# sum = add(10,10)
+# print(sum)
+
 
       
+# def sub(a,b):
+#     return a-b
+# print(sub(10,5))
+
+
+
+# def power (base, exp=2):
+#     return base ** exp
+
+# print(power(5))
+# print(power(5,3))
 
     
 
+        #VARIABLE LENGTHS ARGUMENTS
+# def add_all(*nums):
+#     total =0
+#     for n in nums:
+#         total += n
+#     return total
+# print(add_all(1,2,3,4))    
