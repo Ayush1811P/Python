@@ -90,4 +90,5 @@
 #         min_marks=marks
 #         lowest_student=name
 # print("Student name: ",lowest_student)
-# print("marks: ",min_marks)        
+# print("marks: ",min_marks)    
+#     
