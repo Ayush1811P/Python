@@ -35,13 +35,14 @@
 # print(D.get("age"))     #THIS IS MORE SATE TO FETCH DATA
 
 
-student={
-    "name": "Aayu",
-    "age": 20,
-    "course": "BCA"
-}
-student["age"]=23   #updation of age, dictionary is mutable
-student["course"]="MSOET"
+# student={
+#     "name": "Aayu",
+#     "age": 20,
+#     "course": "BCA"
+# }
+# student["age"]=23   #updation of age, dictionary is mutable
+# student["course"]="MSOET"
+
 
 
 # print(student.get("course"))

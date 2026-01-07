@@ -17,24 +17,24 @@
 #         print("The ASCII value is: ",ascii)  
 #   
 
-print(ord("H"))
-print(ord("h"))
+# print(ord("H"))
+# print(ord("h"))
 
-ch = input("Enter the character: ")
-A=65
-Z=90
-CH= ch.upper()
-value=65
-Alfabets="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-if len(ch)!=1 and len(CH)!=1:
-        print("ENter one alfabet only")
-for i in Alfabets:
+# ch = input("Enter the character: ")
+# A=65
+# Z=90
+# CH= ch.upper()
+# value=65
+# Alfabets="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+# if len(ch)!=1 and len(CH)!=1:
+#         print("ENter one alfabet only")
+# for i in Alfabets:
     
-    if ch == i:
-        print("FOUND!!",value)
+#     if ch == i:
+#         print("FOUND!!",value)
           
-    elif CH ==i:
-        print("FOUND!!",value+32)    
-    value=value+1      
+#     elif CH ==i:
+#         print("FOUND!!",value+32)    
+#     value=value+1      
     
    

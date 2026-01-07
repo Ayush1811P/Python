@@ -231,3 +231,56 @@
 # print(arr2)
 # print(arr)
 
+
+
+# arr = [10, 20, 30, 40, 50]
+# user_delete=int(input("Enter element to delete: "))
+# user_enter=int(input("Enter element to replace: "))
+# if user_delete==user_enter:
+#     print("both are the same elements!")
+# else:
+#     for i in range(len(arr)):
+#         if user_delete == arr[i]:
+#             arr[i]=user_enter
+#             print("Element Replaced successfully!")
+#             break
+#     else:
+#         print("element not found!") 
+         
+# print(arr)        
+
+
+
+
+
+#USING BINARY SEARCH TO REPLACE ELEMENT
+# arr = [
+#     1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+#     12, 14, 15, 18, 20, 21, 22, 24, 25, 27,
+#     28, 30, 32, 33, 35, 36, 38, 40, 42, 44,
+#     45, 47, 48, 50, 52, 54, 55, 57, 58, 60,
+#     62, 63, 65, 66, 68, 70, 72, 74, 75, 77,
+#     78, 80, 82, 84, 85, 87, 88, 90, 92, 94,
+#     95, 97, 98, 100, 105, 110, 115, 120,
+#     130, 140, 150, 160, 180, 200
+# ]
+# arr.sort()
+# target=int(input("Enter the element to delete:"))
+# replace=int(input("Enter the element to replace:"))
+# if target==replace:
+#     print("Both values are same!")
+#     breakpoint
+# else:   
+#     start=0
+#     end=len(arr)-1
+#     while start <=end:
+#         mid=(start + end)//2
+#         if target==arr[mid]:
+#             arr[mid]=replace
+#             print("Element Replaced!")
+#             break
+#         elif target > arr[mid]:
+#             start=mid+1       
+#         else:       
+#             end=mid-1   
+#     print("element dose not exist!")
