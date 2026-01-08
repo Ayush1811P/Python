@@ -65,3 +65,19 @@
 #         start=start+1
 #         end=end-1
 # print(is_palindrome)   
+
+
+
+
+arr=[1,8,3,3,8,0]
+start=0
+end=len(arr)-1
+is_palindrome=True
+for i in range(len(arr)//2):
+    if arr[start]!=arr[end]:
+        is_palindrome=False
+        break
+    else:
+        start=start+1
+        end=end-1
+print(is_palindrome) 
