@@ -148,9 +148,9 @@
             
 
     #LOGICAL, CONCEPTUAL AND FUNDAMENTAL OPERTION OF PYTHON
-#a=10
-#b = "10"
-#c="hii"
+# a=10
+# b = "10"
+# c="hii"
 #print(a,b)
 
 #converting str into integer to perform operation usin -->int(b)<--
@@ -163,7 +163,7 @@
 #print(type(b))
 
 #repetition on a string with integer
-#print(c * a)
+# print(c * a)
 
 
         #LOGICAL DETAILS 
@@ -181,10 +181,10 @@
         #COMPARISON
 
 
-#a=10 
-#c="10"
+# a=10 
+# c="10"
 
-#print(a == c)
+# print(a == c)
 
 #after conersion of str into integer
 #print(a == int(c))
@@ -202,10 +202,11 @@
 #print("5" * 2 + "3")  
 #print(5 * 2 + int("3"))
 #print(bool("False"))
-#print(True * 10)
+# print(True * 10)
+# print(False * 10)
 #print(bool())#if bol()is empty it will throw false
 
-
+# print(False is 0)
         ##KITNE SAHI THE?##
         #ASKING USER TO EXIT 
         #UNTILL KEEP EXECUTING A PROGRAM
