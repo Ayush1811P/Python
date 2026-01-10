@@ -4,6 +4,89 @@
     
 
 
+# def gteet(name="guest"):
+#     print("Hello",name)
+
+# result=gteet("Aayuu")  
+
+
+
+# def square(n):
+#     return n * n
+# result=square(5)
+# print(result)
+
+
+
+
+        #1️⃣ Write a function to check even or odd
+# def odd_even(*nums):
+    
+#     odd=0
+#     even=0
+#     for n in nums:
+#         if n%2==0:
+#             even=even+1
+#         else:
+#             odd=odd+1
+#     return odd,even   
+#print(odd_even(12,14,13,15,16,17))    
+
+
+
+#2️⃣ Write a function that returns maximum of 3 numbers
+# def max(a,b,c):
+#     max=0
+#     if a > b and a>c:
+#         max=a
+#     elif b>a and b>c:
+#         max=b
+#     else:
+#         max=c        
+#     return max    
+
+# result=max(12,15,14)
+# print(result)
+
+
+#3️⃣ Use *args to add unlimited numbers
+# def add_unlimited(*nums):
+#     print(nums)
+
+# result=add_unlimited(1,2,3,3,34,24,34,5)
+# print(result)
+
+
+
+#✅ Problem 8: Factorial
+# def factorial(num):
+#     fact=1
+#     for i in range(1,num+1):
+#         fact*=i
+#     return fact    
+
+# print(factorial(5))
+
+
+
+#✅ Problem 9: Count Vowels
+
+# def count_vowels(s):
+#     count=0
+#     for ch in s.lower():
+#         if ch in "aeiou":
+#             count +=1
+#     return count        
+
+# print(count_vowels("PYTHONAYUSHENGLISH"))
+
+
+
+
+
+
+
+
         #MAKING A PROGRAM USING FUNCTION DECLERATION AND CALLING
 # def calculator():
 #     print("Welcome to the calculator!")
@@ -86,3 +169,6 @@
 #         total += n
 #     return total
 # print(add_all(1,2,3,4))    
+
+
+

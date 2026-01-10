@@ -175,3 +175,52 @@
 
 # answer=sum_ofAll(1234)
 # print(answer)
+
+
+# a = [1, 2, 3]
+# b = a.copy()
+# b.append(4)
+# print(b)
+# print(a)
+
+
+
+
+#              Q4️⃣ 
+# (Coding | Lists + Loop + Condition)
+# 👉 Task:
+# Write a Python program that:
+# Takes a list of numbers
+# Creates a new list containing only even numbers
+# Prints the new list
+
+
+
+# old_list=[]
+# size=int(input("Enter the size of the list: "))
+# if size <=0:
+#     print("Enter valid size number")
+    
+# else:
+#     for i in range(size):
+#         value=int(input("Enter the element: "))
+#         if value<0:
+#             print("please enter positive numbers")
+#             continue
+#         else:
+#             old_list.append(value)
+
+#     print(old_list)
+#     even_list=[]
+
+#     for i in old_list:
+#         if i%2==0:
+#             even_list.append(i)
+#     print(even_list)
+        
+
+
+
+
+data = {"a": 1, "b": 2}
+print(data)
