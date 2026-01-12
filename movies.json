@@ -1,0 +1,1 @@
+{"users": {"aayu": {"password": "abc123", "balance": 9900}}, "movies": {"Avengers": {"price": 100, "seats": 4}, "Marvel Supermane": {"price": 300, "seats": 5}, "Batman": {"price": 200, "seats": 5}}}
