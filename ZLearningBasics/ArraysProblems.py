@@ -172,19 +172,19 @@
 # print(Result)
 
 
-arr=[10, 20, 30, 40, 50, 60]
-result=[]
-n=len(arr)
-mid=n//2
-left=mid-1
-right=mid
-while left>=0 and right <=n:
-    result.append(arr[left])
-    result.append(arr[right])
-    left=left-1
-    right = right+1
+# arr=[10, 20, 30, 40, 50, 60]
+# result=[]
+# n=len(arr)
+# mid=n//2
+# left=mid-1
+# right=mid
+# while left>=0 and right <=n:
+#     result.append(arr[left])
+#     result.append(arr[right])
+#     left=left-1
+#     right = right+1
 
-print(result)
+# print(result)
 
 
 # arr=[0,1,0,3,0,5] 
