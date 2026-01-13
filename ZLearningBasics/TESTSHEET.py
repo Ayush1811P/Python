@@ -19,7 +19,7 @@
 
 
 
-                # Q3️⃣
+        # Q3️⃣
 # Write a program to:
 # Take a list of integers
 # Count how many even and odd numbers are present
@@ -43,7 +43,7 @@
 # print("Total even numbers are: ",even)    
 # print("Total odd numbers are: ",odd)    
 
-
+  
 
 
 
@@ -145,26 +145,23 @@
 # Do NOT use .index()
 
 
-# def is_binary(arr,target):
-#     start=0
-#     end=len(arr)-1
-
-#     while start <=end:
-#         mid=(start+end)//2
-#         if target==arr[mid]:
-#             return mid
-            
-#         else:
-#             if target <mid:
-#                 end=mid-1
-#             else:
-#                 start=mid+1    
-#     return -1
+def is_binary(arr,target):
+    start=0
+    end=len(arr)-1
+    while start <=end:
+        mid=(start+end)//2
+        if target==arr[mid]:
+            return mid          
+        else:
+            if target <mid:
+                end=mid-1
+            else:
+                start=mid+1    
+    return -1
 
 
 # arr=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-# target=29
-
+# target=3
 # result=is_binary(arr,target)
 # print(result)
 
@@ -195,7 +192,6 @@
 # Prints the new list
 
 
-
 # old_list=[]
 # size=int(input("Enter the size of the list: "))
 # if size <=0:
@@ -222,5 +218,6 @@
 
 
 
-data = {"a": 1, "b": 2}
-print(data)
+
+# data = {"a": 1, "b": 2}
+# print(data)--

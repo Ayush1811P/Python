@@ -34,7 +34,7 @@
 # print(sum)
 
 
-
+    #BINARY SEARCH#
 # arr=[10,20,30,40,50,60]
 # n=len(arr)
 # mid=n//2
@@ -82,6 +82,7 @@
 # print(arr, " ",freq)        
 
 
+        
 
 #MOVE ZEROES TO THE END OF THE LIST
 
@@ -96,7 +97,6 @@
 # rev=[]
 # for i in range(n-1,-1,-1):
 #     rev.append(arr[i])
-
 # print(rev)
 
 
@@ -134,6 +134,14 @@
 
 
 # arr=[-1,0,4,-5,-3,53,-9,0,43,-11]
+# rev=[]
+# for i in range(len(arr)-1,-1,-1):
+#     rev.append(arr[i])
+# print(rev)    
+
+
+
+# arr=[-1,0,4,-5,-3,53,-9,0,43,-11]
 # A=[]
 # B=[]
 # mid=len(arr)//2
@@ -146,7 +154,7 @@
 #     B.append(arr[i])
 
 # print(A)    
-# print(B)    
+# printz(B)    
 
 
 # arr=[10, 20, 30, 40, 50, 60]
@@ -161,24 +169,32 @@
 #     Result.append(arr[right])
 #     left=left+1
 #     right=right+1
-
-
 # print(Result)
 
 
-# arr=[10, 20, 30, 40, 50, 60]
-# result=[]
-# n=len(arr)
-# mid=n//2
-# left=mid-1
-# right=mid
-# while left>=0 and right <=n:
-#     result.append(arr[left])
-#     result.append(arr[right])
-#     left=left-1
-#     right = right+1
+arr=[10, 20, 30, 40, 50, 60]
+result=[]
+n=len(arr)
+mid=n//2
+left=mid-1
+right=mid
+while left>=0 and right <=n:
+    result.append(arr[left])
+    result.append(arr[right])
+    left=left-1
+    right = right+1
 
-# print(result)
+print(result)
+
+
+# arr=[0,1,0,3,0,5] 
+# for i in range(len(arr)):
+#     for j in range(len(arr)-1):
+#         if arr[j]==0:
+#             arr[j],arr[j + 1]=arr[j + 1],arr[j]
+# print(arr)
+
+
 
 
 
@@ -249,6 +265,21 @@
          
 # print(arr)        
 
+
+
+
+# arr=[1,2,3,2,1]
+# is_palindrome=True
+# left=0
+# right=len(arr)-1
+# while left < right:
+#     if arr[left]!=arr[right]:
+#         is_palindrome=False
+#         break
+#     else:
+#         left=left+1
+#         right=right-1
+#     print(is_palindrome)           
 
 
 
