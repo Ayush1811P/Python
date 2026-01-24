@@ -1,6 +1,6 @@
 print("Welcome to the love calculator")
-name_1=input("Please Enter the first name: \n")
-name_2=input("Please enter the second name: \n")
+name_1=input("Please Enter the first name: ")
+name_2=input("Please enter the second name: ")
 combined_name = name_1+name_2
 lc_name = combined_name.lower()
 t=lc_name.count("t")

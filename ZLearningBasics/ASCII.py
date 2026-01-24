@@ -40,13 +40,13 @@
 # print(ord("h"))
 
 # ch = input("Enter the character: ")
-# A=65
+# A=65x
 # Z=90
 # CH= ch.upper()
 # value=65
 # Alfabets="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 # if len(ch)!=1 and len(CH)!=1:
-#         print("ENter one alfabet only")
+#         print("Enter one alfabet only")
 # for i in Alfabets:
     
 #     if ch == i:

@@ -84,14 +84,17 @@
 
 
     #INPORTANT FOR NOTES
-data = {"a": 1, "b": 2}
-data["c"] = data.get("a") + data.get("b")
-data["d"]=data.get("a")+20
-print(data)
+# data = {"a": 1, "b": 2}
+# data["c"] = data.get("a") + data.get("b")
+# data["d"]=data.get("a")+20
+# print(data)
 
 
-data1 = {"x": 10}
-#print(data1.get("y", 0))
+# data1 = {"x": 10}
+# #print(data1.get("y", 0))
 
-s = set([1, 1, 1, 2])
-print(s)
+# s = set([1, 1, 1, 2])
+# print(s)
+
+
+
