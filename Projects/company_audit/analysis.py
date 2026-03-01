@@ -1,3 +1,4 @@
+import os
 file = open("client_employee_data_2025.csv","r")
 lines=file.readlines()
 header=lines[0]

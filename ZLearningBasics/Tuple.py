@@ -17,8 +17,23 @@
 # print(min)
 
 
+
+# T2=(20,31,40,9,56,76) 
+# for x in T2:
+#     if x%2==0:
+#         print(f"{x} is EVEN")
+#     elif x%2!=0:
+#         print(f"{x} is ODD")
+#     else:
+#         print(f"{x} is not numeric")    
+    
+
 # t1=(10,20,30,40,5)
 # t2=("ayush",18,"BCA")
+# new=list(t1 + t2)
+# # print(new)
+# new_Tuple=new
+# print(new_Tuple)
 # print("Touple 1:",t1)
 # print("Touple 2:",t2)
 
@@ -32,6 +47,7 @@
 # print("maximum: ",max(t1))
 # print("minimum: ",min(t1))
 # print("Sum: ",sum(t1))
+
 
 
 # t3=(1,2,3,2,4,3,4,3,5,4,5,3,2)

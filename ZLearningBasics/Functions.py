@@ -172,3 +172,35 @@
 
 
 
+# def even_odd():
+#     size=int(input("Enter total numbers: "))
+#     num=[]
+#     for x in range(size):
+#         n=int(input("Enter the numbers: "))
+#         num.append(n)
+#     for x in num:
+#         if x % 2==0:
+#             print(f"{x} is Even")
+#         elif x % 2 !=0:
+#             print(f"{x} is Odd")
+#         else:
+#             print(f"{x }is not a number")
+
+# def is_prime():
+#     is_prime=True
+#     num=int(input("Enter the number: "))
+#     for x in range(2,num):
+#         if x/num==0:
+#             is_prime=False
+#             return
+#     if is_prime==False:
+#         print("This is not prime number")
+#     else:
+#         print("This is a prime number")    
+    
+
+# def main():
+#     #oddeven=even_odd()
+#     is_prime()
+# main()    
+
