@@ -1,0 +1,211 @@
+import random
+subjects = [
+    "Shah Rukh Khan",
+    "Virat Kohli",
+    "Narendra Modi",
+    "Ranveer Singh",
+    "Alia Bhatt",
+    "Salman Khan",
+    "Deepika Padukone",
+    "Rohit Sharma",
+    "MS Dhoni",
+    "Hardik Pandya",
+    "Akshay Kumar",
+    "Tiger Shroff",
+    "Priyanka Chopra",
+    "Amitabh Bachchan",
+    "Rajinikanth",
+    "Kapil Sharma",
+    "Neha Kakkar",
+    "Anushka Sharma",
+    "KL Rahul",
+    "Sachin Tendulkar",
+
+    "a teacher",
+    "a student",
+    "a software engineer",
+    "a chaiwala",
+    "an electrician",
+    "a plumber",
+    "a bus driver",
+    "an auto driver",
+    "a delivery boy",
+    "a security guard",
+    "a doctor",
+    "a lawyer",
+    "a police officer",
+    "a farmer",
+    "a shopkeeper",
+    "a gym trainer",
+    "a news reporter",
+    "a YouTuber",
+    "an Instagram influencer",
+    "a tuition teacher",
+
+    "a cow",
+    "a monkey",
+    "a street dog",
+    "a buffalo",
+    "a cat",
+    "a goat",
+    "a pigeon",
+    "a parrot",
+    "an elephant",
+    "a horse",
+    "a donkey"
+]
+
+
+actions = [
+    "doing yoga",
+    "eating samosa",
+    "eating pani puri",
+    "drinking chai",
+    "riding a scooter",
+    "riding a horse",
+    "washing clothes",
+    "bathing in cold water",
+    "laughing loudly",
+    "crying secretly",
+    "playing cricket",
+    "playing PUBG",
+    "playing Ludo",
+    "watching reels",
+    "scrolling social media",
+    "giving motivational speech",
+    "attending online class",
+    "sleeping in office",
+    "running away",
+    "dancing on Bollywood songs",
+
+    "arguing with auto driver",
+    "standing in metro",
+    "fighting over WiFi",
+    "studying for exams",
+    "preparing for UPSC",
+    "celebrating birthday",
+    "launching new startup",
+    "opening a tea stall",
+    "checking phone battery",
+    "looking for charger",
+    "doing pushups",
+    "meditating seriously",
+    "protesting against homework",
+    "ordering food online",
+    "cooking Maggi",
+    "buying vegetables",
+    "standing in traffic",
+    "giving resignation",
+    "joining politics",
+    "making Instagram reel",
+
+    "breaking TV remote",
+    "searching for job",
+    "eating mangoes",
+    "playing Holi",
+    "bursting crackers",
+    "reading newspaper",
+    "taking selfie",
+    "shouting at neighbors",
+    "selling old phone",
+    "investing in crypto",
+    "complaining about heat"
+]
+
+places_objects = [
+    "in Noida",
+    "in Mumbai",
+    "in Delhi",
+    "in Bengaluru",
+    "in Hyderabad",
+    "in Chennai",
+    "in Kolkata",
+    "in Jaipur",
+    "in Lucknow",
+    "in Varanasi",
+    "in Patna",
+    "in Goa",
+    "in a metro station",
+    "at India Gate",
+    "at Gateway of India",
+    "at railway station",
+    "inside Parliament",
+    "inside classroom",
+    "inside shopping mall",
+    "inside office",
+
+    "with a banana",
+    "with a samosa",
+    "with a cricket bat",
+    "with a laptop",
+    "with a smartphone",
+    "with a TV remote",
+    "with soap",
+    "with bucket",
+    "with a mic",
+    "with a camera",
+    "with a pressure cooker",
+    "with Maggi packet",
+    "with Aadhaar card",
+    "with electricity bill",
+    "with exam paper",
+    "with water bottle",
+    "with loudspeaker",
+    "on social media",
+    "on Instagram Live",
+    "on YouTube",
+
+    "during IPL match",
+    "during monsoon",
+    "during power cut",
+    "during wedding",
+    "during festival",
+    "near tea stall",
+    "near traffic signal",
+    "on the road",
+    "inside lift",
+    "on a rooftop",
+    "inside gym"
+]
+templates = [
+    "BREAKING NEWS: {s} caught {a} {p}!",
+    "SHOCKING: {s} seen {a} {p}!",
+    "EXCLUSIVE: {s} admits {a} {p}!",
+]
+
+
+def get_random_subject():
+    return random.choice(subjects)
+
+def get_random_action():
+    return random.choice(actions)
+def get_random_places():
+    return random.choice(places_objects)
+
+def get_random_template():
+    return random.choice(templates)
+
+def generate_headline():
+    subject = get_random_subject()
+    action=get_random_action()
+    place=get_random_places()
+    template=get_random_template()
+   
+    headline=template.format(s=subject,a=action,p=place)
+    return headline
+def ask_user():
+    counter=0
+    while True:
+        counter+=1
+        print("\n"+generate_headline())
+        
+        try:
+            choice=int(input("\nDo you want one more?\n(1 = Yes | 0 = No)\nEnter choice: "))
+            if choice==0:
+                print("Total headlines: ",counter)
+                break
+        except ValueError:
+            print("invalid input| exiting..")
+            break   
+
+ask_user()         
