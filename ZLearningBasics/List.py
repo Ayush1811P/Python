@@ -81,3 +81,38 @@
 #         start=start+1
 #         end=end-1
 # print(is_palindrome) 
+
+# my_list= [3, 1, 4, 1, 5, 9, 2, 6, 5, 3]
+# i=my_list[0]
+# while i <len(my_list):
+#     j=i+1
+#     while j < len(my_list):
+#         if my_list[i]==my_list[j]:
+#             my_list.pop(j)
+#         else:
+#             j+=1
+#     i+=1
+# print(my_list)            
+
+
+nums=[1,2,3,4,5,6,7,8,9,10]
+odds_only=[n for n in nums if n%2!=0]
+print(odds_only)
+print()
+
+words=["apple","banana","kiwi","fig","mango"]
+result=[w.upper() for w in words if len(w)>4]
+print(result)
+print()
+
+
+numbers=[1,2,3,4,5]
+answer={n: n*n*n for n in numbers}
+print(answer)
+print()
+
+
+words="Hello World Python"
+words=words.split()
+Result2=[len(w) for w in words]
+print(Result2)

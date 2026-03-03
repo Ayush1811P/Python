@@ -204,3 +204,21 @@
 #     is_prime()
 # main()    
 
+# def add(a:float,b:float) -> float:
+#     return 'hello'
+# print(add(12.8,3.2))
+
+
+# def greet(name,greeting="Hello"):
+#     return f"{greeting} {name}"
+# print(greet("Ayush"))
+
+
+
+# def add_all(*nums):
+#     total=0
+#     for n in nums:
+#         total=total+n
+#     return total
+
+# print(add_all(1,2,3,4,5))    

@@ -226,24 +226,22 @@
 
 
 
-# def is_prime(num):
-#     prime=True
-#     if num % 2==0:
-#         return False
+def is_prime(num):
+    if num % 2==0:
+        return False
     
-#     if not isinstance(num,int):
-#         raise TypeError("enter integer only!")
-#     if num<=0 or num==1:
-#         return False
-#     else:
+    if not isinstance(num,int):
+        raise TypeError("enter integer only!")
+    if num<=0 or num==1:
+        return False
+    else:
         
-#         for x in range(2,num):
-#             if x%num==0:
-#                 prime=False
-#                 return prime
-#     return prime        
+        for x in range(2,num):
+            if num%x==0:               
+                return False
+    return True        
            
-# print(is_prime(14))
+print(is_prime(19))
 
 
 
@@ -296,5 +294,88 @@
 # print(remove_duplicates([10,10,10,10,10]) )        
 
 
-                
 
+
+
+
+
+
+
+# def count_words(words):
+#     freq={}
+#     for word in words:
+#         if word in freq:
+#             freq[word]+=1
+#         else:
+#             freq[word]=1
+#     return freq 
+
+# print(count_words(["apple", "banana", "apple", "cherry", "banana", "apple"]))       
+
+# def fizzbuzz(n):
+#     for x in range(1,n+1):
+#         if x %3==0 and x%5==0:
+#             print('FizzBuzz')
+#         elif x%3==0:
+#             print("Fizz")
+#         elif x%5==0:
+#                 print("Buzz")
+#         else:
+#             print(x)
+
+
+# fizzbuzz(15)
+
+
+
+
+# def is_palindrome(str):
+#     palindrome=True
+#     left=0
+#     right=len(str)-1
+#     while left < right:
+#         if str[left]!=str[right]:
+#             return False
+#         left+=1
+#         right-=1
+            
+#     return True
+
+# print(is_palindrome(""))
+
+
+
+
+# def second_max(nums):
+#     s1=set(nums)
+#     numbers=list(s1)
+#     if len(numbers)<=1:
+#         return print("no second element")
+#         exit()
+#     maximum=max(numbers) 
+#     second_maximum=numbers[0]  
+#     for n in numbers:
+#         if n >second_maximum and n < maximum:
+#             second_maximum=n
+#     return second_maximum
+
+# print(second_max([3, 1, 4, 1, 5, 9, 2, 6])  )        
+
+
+
+
+# def non_repeating(s):
+#     s=s.replace(" ","")
+#     if s is None:
+#         print("enter some string")
+        
+#     freq={}
+#     for ch in s:
+#         freq[ch] = freq.get(ch,0)+1
+#     for key,value in freq.items():
+#         if value==1:
+#             return key
+        
+#     return None               
+
+# print(non_repeating("python"))
