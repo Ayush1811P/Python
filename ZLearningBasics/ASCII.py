@@ -48,7 +48,6 @@
 # if len(ch)!=1 and len(CH)!=1:
 #         print("Enter one alfabet only")
 # for i in Alfabets:
-    
 #     if ch == i:
 #         print("FOUND!!",value)
           

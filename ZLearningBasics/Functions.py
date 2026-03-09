@@ -11,6 +11,7 @@
 
 
 
+
 # def square(n):
 #     return n * n
 # result=square(5)
@@ -199,10 +200,7 @@
 #         print("This is a prime number")    
     
 
-# def main():
-#     #oddeven=even_odd()
-#     is_prime()
-# main()    
+   
 
 # def add(a:float,b:float) -> float:
 #     return 'hello'
@@ -222,3 +220,4 @@
 #     return total
 
 # print(add_all(1,2,3,4,5))    
+

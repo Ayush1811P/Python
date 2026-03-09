@@ -44,3 +44,11 @@
 # print(data3)
 
 
+file=open("STUDENTS.txt","w")
+file.write("content")
+file.close()
+
+file=open("STUDENTS.txt","r")
+data=file.read()
+print(data)
+file.close()

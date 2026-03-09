@@ -98,3 +98,33 @@
 
 
 
+#creating a list of dictionaries to make the program look simple hence all the key values are same
+#in all those dictionaries
+# students=[
+#     {"name":"harry","house":"san-frans"},
+#     {"name":"kevin","house":"san-frans"},
+#     {"name":"bobby","house":"san-autria"},
+#     {"name":"adam","house":None},
+
+# ]
+
+# for student in students:
+#     print(student['name'],student['house'],sep=",")
+
+
+# import random as r
+
+
+# my_list=[]
+# for x in range(10):
+#     my_list.append(r.randint(1,9))
+   
+
+# print(my_list)
+
+# import sys
+# value=sys.argv[1]
+# print("HELLO I AM ' ",value)
+
+
+
