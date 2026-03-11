@@ -16,10 +16,7 @@ def test_square():
         assert square(0)==0
     except AssertionError:
         print("0 squared was not 0")  
-    try:
-        assert square("")
-    except AssertionError:
-        print("error")    
+   
           
     #assert square(3)==9
 

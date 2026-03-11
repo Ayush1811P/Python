@@ -1,0 +1,56 @@
+# arr=[1,2,3,6,5,5,7,7,7,7,8,9,7,8]
+# arr2=[]
+# arr3 =[]
+# for y in range(len(arr)//2):
+#     arr2.append(arr[y])
+
+# for x in range (len(arr)//2,len(arr)):
+#     arr3.append(arr[x])
+# print(arr2)    
+# print(arr3)
+
+
+
+
+# def main():
+#     x=int(input("enter x: "))
+#     print("X squared is: ", square(x))
+
+# def square(n):
+#     return n-n
+
+# if __name__ == "__main__":
+#     main()    
+
+
+
+
+
+
+
+# def intersection(a, b):
+#   temp=[]
+#   for i in a:
+#     if i in b:
+#       temp.append(i)
+#   return temp
+
+# print(intersection([1, 2, 3, 4, 9],[0, 1, 4, 3]))
+
+
+
+# def interection(a,b):
+#     intersection_list = []
+#     for value in a:
+#       if value in b:
+#         intersection_list.append(value)
+#     return intersection_list    
+
+# print(interection([1,2,4,5,6],[1,]))
+
+
+
+
+
+
+
