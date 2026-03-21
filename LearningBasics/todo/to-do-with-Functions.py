@@ -12,6 +12,8 @@ def remove_task():
     try:
         rm=1
         while rm==1:
+            if len(tasks)==0:
+                print("no tasks exist")
             removes=input("Enter task to remove: ")          
             tasks.remove(removes)
             rm=int(input("want to remove more |Y=1  N=0: "))
@@ -44,5 +46,5 @@ def main():
             display()
         else:
             print(-1)        
-
+ 
 main()            
