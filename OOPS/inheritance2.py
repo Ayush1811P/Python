@@ -12,10 +12,10 @@ class student(School):
 class teacher(School):
     ...
 
-person1=student("Ayush","Student")
-person2=teacher("Babbu","Teacher")        
-print(person1.belongs_to())
+person1=student("Ayush","Student")#1
+person2=teacher("Babbu","Teacher") #2       
+print(person1.belongs_to())#1(1)
 print("#"*30)
-print("/n",person1.belong_to())
+print("/n",person1.belong_to())#1(2)
 print("*"*30)
-print(person2.belongs_to())
+print(person2.belongs_to())#2(1)

@@ -1,3 +1,32 @@
+        #workings of ENCAPSULATION
+
+        #PROGRAM:  1
+
+class bank_account:
+    def __init__(self,user,balance):
+        self.user=user
+        self.__balance=balance #Encapsulation
+    def details(self):
+        return f"{self.user} your balance is {self.__balance}"
+    
+b1=bank_account("Ayush",1000)#1(1)
+print(b1.details())#1(2)
+try:#1(3)
+    print(f"Accessing username only: {b1.user}")  
+except BaseException:
+    print(-1)
+ 
+try:#1(4)
+    print(f"Accessing balance only: {b1.__balance}")#cannot be accesible dierectly!
+except BaseException:
+    print(-1)     
+
+
+
+
+
+            #PROGRAM:  2
+
 # class Bank_Account:
 #     def __init__(self,user,balance):
 #         self.user=user
@@ -43,14 +72,5 @@
               
 
 
-class bank_account:
-    def __init__(self,user,balance):
-        self.user=user
-        self.__balance=balance #Encapsulation
-    def details(self):
-        return f"{self.user} your balance is {self.__balance}"
-    
-b1=bank_account("Ayush",1000)
-print(b1.details())
-print(b1.user)    
-print(b1.balance)    #cannot be accesible dierectly!
+
+

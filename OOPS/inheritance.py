@@ -10,12 +10,18 @@ class university(bank_account):#here i am just using the inheritance
 
 class school(bank_account):#class 2 
     ...
-# s1=school("Ayushi",190)
-# print(s1.details())    
-# s1.__balance=2000#this will not work because balance is encapsulated!
-# print(s1.details())    
 
-# b1=university("Ayush",1000)
-# print(b1.details())
+#1    
+s1=school("Ayushi",190)
+print(s1.details()) 
 
-        
+#2
+s1.__balance=2000#this will not work because balance is encapsulated!
+print(s1.details()) 
+
+#3
+s2=university("Ayush",6000)
+print(s2.details())
+
+
+#4        
