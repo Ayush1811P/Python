@@ -1,0 +1,747 @@
+"""
+═════════════════════════════════════════════════════════════════════════════
+                    OBJECT-ORIENTED PROGRAMMING (OOP) NOTES
+                          Complete Guide: Lessons 1-5
+═════════════════════════════════════════════════════════════════════════════
+"""
+
+# ═════════════════════════════════════════════════════════════════════════════
+# LESSON 1: CLASSES AND OBJECTS - THE FOUNDATION
+# ═════════════════════════════════════════════════════════════════════════════
+
+"""
+DEFINITION:
+-----------
+CLASS: A blueprint or template for creating objects. It defines what data 
+       (attributes) and actions (methods) an object will have.
+
+OBJECT: A specific instance created from a class. Each object has its own 
+        unique data but shares the structure defined by the class.
+
+ANALOGY:
+--------
+Class = Cookie cutter (blueprint)
+Object = Actual cookies made from the cutter (instances)
+
+KEY CONCEPTS:
+- Attributes: Properties/characteristics of an object (noun)
+- Methods: Actions/behaviors an object can perform (verb)
+- self: Refers to the specific object being used
+"""
+
+# BASIC EXAMPLE:
+class Car:
+    """A simple Car class"""
+    
+    # Attributes (class level - shared template)
+    brand = "Unknown"
+    color = "Unknown"
+    year = 0
+    
+    # Method (action)
+    def drive(self):
+        return f"The {self.color} {self.brand} is driving!"
+
+
+# Creating objects (instances)
+car1 = Car()
+car1.brand = "Toyota"
+car1.color = "Red"
+car1.year = 2023
+
+car2 = Car()
+car2.brand = "BMW"
+car2.color = "Blue"
+car2.year = 2024
+
+print(car1.drive())  # Output: The Red Toyota is driving!
+print(car2.drive())  # Output: The Blue BMW is driving!
+
+
+# ═════════════════════════════════════════════════════════════════════════════
+# LESSON 2: CONSTRUCTORS - __init__()
+# ═════════════════════════════════════════════════════════════════════════════
+
+"""
+DEFINITION:
+-----------
+CONSTRUCTOR: A special method (__init__) that automatically runs when 
+             an object is created. It initializes (sets up) the object 
+             with initial values.
+
+WHY DO WE NEED IT?
+------------------
+Without constructor, you have to manually set each attribute:
+    car = Car()
+    car.brand = "Toyota"  ❌ Repetitive!
+    car.color = "Red"
+    car.year = 2023
+
+With constructor, you pass everything at once:
+    car = Car("Toyota", "Red", 2023)  ✅ Clean and simple!
+
+SYNTAX:
+-------
+def __init__(self, parameter1, parameter2):
+    self.attribute1 = parameter1
+    self.attribute2 = parameter2
+"""
+
+# EXAMPLE WITH CONSTRUCTOR:
+class Person:
+    def __init__(self, name, age, city):
+        """Constructor - runs automatically when object is created"""
+        self.name = name
+        self.age = age
+        self.city = city
+    
+    def introduce(self):
+        return f"Hello, I'm {self.name}, I'm {self.age} from {self.city}"
+
+
+# Now creation is simple!
+p1 = Person("Ayush", 23, "Noida")
+p2 = Person("Priya", 21, "Delhi")
+
+print(p1.introduce())  # Output: Hello, I'm Ayush, I'm 23 from Noida
+print(p2.introduce())  # Output: Hello, I'm Priya, I'm 21 from Delhi
+
+
+# CONSTRUCTOR WITH DEFAULT VALUES:
+class Dog:
+    def __init__(self, name, age=0, breed="Unknown"):
+        """age and breed have default values"""
+        self.name = name
+        self.age = age
+        self.breed = breed
+
+
+dog1 = Dog("Buddy", 5, "Golden Retriever")
+dog2 = Dog("Max")  # age=0, breed="Unknown" (defaults)
+
+print(f"{dog1.name} is a {dog1.breed}")  # Buddy is a Golden Retriever
+print(f"{dog2.name} is a {dog2.breed}")  # Max is a Unknown
+
+
+# ═════════════════════════════════════════════════════════════════════════════
+# YOUR CODE - TASK 1: PERSON CLASS
+# ═════════════════════════════════════════════════════════════════════════════
+
+"""
+YOU CREATED:
+"""
+class person:  # Should be 'Person' (convention)
+    name = "USER"
+    age = 0
+    city = "unknown"
+
+    def introduce(self):
+        print(f"Hello, i'm {self.name} i'm {self.age} from {self.city}")
+
+
+p1 = person("Ayush", 23, "Noida")
+# ❌ ISSUE: You didn't use __init__, so attributes weren't being set!
+# The parameters weren't being stored in the object.
+
+# IMPROVED VERSION:
+class Person:
+    def __init__(self, name, age, city):
+        self.name = name
+        self.age = age
+        self.city = city
+    
+    def introduce(self):
+        return f"Hello, I'm {self.name}, I'm {self.age} from {self.city}"
+
+p1 = Person("Ayush", 23, "Noida")
+print(p1.introduce())  # Now it works!
+
+
+# ═════════════════════════════════════════════════════════════════════════════
+# LESSON 3: INSTANCE METHODS vs CLASS METHODS vs STATIC METHODS
+# ═════════════════════════════════════════════════════════════════════════════
+
+"""
+THREE TYPES OF METHODS:
+"""
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 1. INSTANCE METHODS (Regular methods)
+# ─────────────────────────────────────────────────────────────────────────────
+
+"""
+DEFINITION:
+-----------
+A method that works with individual object instances (using 'self').
+It can access and modify instance attributes.
+
+KEY POINTS:
+- Uses 'self' parameter
+- Called on objects: car1.method()
+- Each object has its own instance variables
+- Most common type of method
+
+EXAMPLE:
+"""
+class Student:
+    def __init__(self, name, marks):
+        self.name = name      # Instance variable
+        self.marks = marks
+    
+    def get_grade(self):  # Instance method
+        if self.marks >= 80:
+            return "A"
+        elif self.marks >= 60:
+            return "B"
+        else:
+            return "C"
+
+
+s1 = Student("Ayush", 85)
+print(s1.get_grade())  # Called on object s1
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 2. CLASS METHODS
+# ─────────────────────────────────────────────────────────────────────────────
+
+"""
+DEFINITION:
+-----------
+A method that works with the CLASS itself, not individual objects.
+Uses 'cls' instead of 'self'.
+Works with class variables (shared by all objects).
+
+KEY POINTS:
+- Decorated with @classmethod
+- Uses 'cls' parameter (refers to the class)
+- Called on class: Student.method()
+- Works with class variables
+
+WHEN TO USE:
+- Count total objects created
+- Create objects from data (factory methods)
+- Access/modify shared data
+
+EXAMPLE:
+"""
+class Student:
+    total_students = 0  # Class variable (shared)
+    
+    def __init__(self, name, marks):
+        self.name = name          # Instance variable
+        self.marks = marks
+        Student.total_students += 1  # Increment shared counter
+    
+    @classmethod
+    def get_total_students(cls):
+        return f"Total students: {cls.total_students}"
+
+
+s1 = Student("Ayush", 85)
+s2 = Student("Priya", 92)
+
+print(Student.get_total_students())  # Called on CLASS, not object
+# Output: Total students: 2
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# 3. STATIC METHODS
+# ─────────────────────────────────────────────────────────────────────────────
+
+"""
+DEFINITION:
+-----------
+A utility function inside a class. Doesn't need 'self' or 'cls'.
+Doesn't access instance or class data.
+
+KEY POINTS:
+- Decorated with @staticmethod
+- No 'self' or 'cls' parameter
+- Called on class or object
+- Pure utility functions
+
+WHEN TO USE:
+- Helper functions
+- Validation checks
+- Mathematical calculations
+- Anything that doesn't need class/instance data
+
+EXAMPLE:
+"""
+class Student:
+    @staticmethod
+    def is_valid_marks(marks):
+        return 0 <= marks <= 100
+
+
+print(Student.is_valid_marks(85))   # True
+print(Student.is_valid_marks(150))  # False
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# ALL THREE METHODS TOGETHER
+# ─────────────────────────────────────────────────────────────────────────────
+
+class Student:
+    total_students = 0
+    
+    def __init__(self, name, id, grade, marks=0):
+        self.name = name
+        self.id = id
+        self.grade = grade
+        self.marks = marks
+        Student.total_students += 1
+    
+    # Instance method - works with individual student
+    def is_passed(self):
+        return "Pass" if self.marks > 40 else "Fail"
+    
+    # Class method - works with all students
+    @classmethod
+    def get_total_students(cls):
+        return f"Total students: {cls.total_students}"
+    
+    # Static method - utility function
+    @staticmethod
+    def is_valid_marks(marks):
+        return 0 <= marks <= 100
+
+
+# Testing all three
+s1 = Student("Ayush", 18, "A", 76)
+s2 = Student("Priya", 19, "B", 85)
+
+print(s1.is_passed())                    # Instance method
+print(Student.get_total_students())      # Class method
+print(Student.is_valid_marks(85))        # Static method
+
+
+# ═════════════════════════════════════════════════════════════════════════════
+# YOUR CODE - TASK 3: COMPLETE STUDENT CLASS
+# ═════════════════════════════════════════════════════════════════════════════
+
+"""
+YOUR ORIGINAL CODE:
+"""
+class bachhe:
+    total_student = 0
+    
+    def __init__(self, name, id, grade, marks=0):
+        self.name = name
+        self.id = id
+        self.grade = grade
+        self.marks = marks
+        bachhe.total_student += 1  # ✅ Increment class variable
+    
+    def greet(self):
+        return f"hello i'm {self.name} my id is {self.id} \nMy grade is:{self.grade} and marks = {self.marks}"
+    
+    def is_passed(self):
+        return "pass" if self.marks > 40 else "Fail"
+    
+    @classmethod
+    def get_total_students(cls):
+        return f"Total students: {cls.total_student}"
+    
+    @staticmethod  # ✅ FIXED: should be @staticmethod
+    def is_valid_marks(marks):
+        return 0 <= marks <= 100
+
+
+s1 = bachhe("Ayush", 18, "A", 85)
+s2 = bachhe("Ayushi", 19, "B", 100)
+
+print(s1.get_total_students())  # ✅ Works!
+print(bachhe.is_valid_marks(85))  # ✅ Works!
+
+
+# ═════════════════════════════════════════════════════════════════════════════
+# LESSON 4: ENCAPSULATION - HIDING INTERNAL DETAILS
+# ═════════════════════════════════════════════════════════════════════════════
+
+"""
+DEFINITION:
+-----------
+Encapsulation means bundling data and methods together and hiding 
+internal details from the outside world. It provides controlled access 
+to data through methods.
+
+REAL-WORLD ANALOGY:
+- A car's engine is hidden inside (private)
+- You interact with it through steering wheel, pedals, buttons (public methods)
+- You don't need to know HOW the engine works, just HOW to use it
+
+WHY IS IT IMPORTANT?
+- Prevents accidental or malicious data modification
+- Provides validation (only valid data is stored)
+- Allows changing internal implementation without breaking external code
+- Makes code more secure and maintainable
+
+PYTHON ACCESS LEVELS:
+"""
+
+# 1. PUBLIC (normal name)
+class BankAccount:
+    def __init__(self, owner, balance):
+        self.owner = owner      # Public - anyone can access/modify
+        self.balance = balance
+
+
+account = BankAccount("Ayush", 1000)
+account.balance = 999999  # ❌ Anyone can change it! Not safe!
+
+
+# 2. PRIVATE (double underscore __)
+class BankAccount:
+    def __init__(self, owner, balance):
+        self.owner = owner
+        self.__balance = balance  # Private - hidden from outside
+
+
+account = BankAccount("Ayush", 1000)
+# account.__balance = 999999  # ❌ Error! It's private!
+
+
+# 3. PROTECTED (single underscore _) - by convention
+class BankAccount:
+    def __init__(self, owner, balance):
+        self._internal_data = balance  # "Protected" by convention
+
+
+# THE RIGHT WAY - Encapsulation:
+class BankAccount:
+    def __init__(self, owner, balance):
+        self.owner = owner
+        self.__balance = balance  # Private
+    
+    def deposit(self, amount):
+        """Add money with validation"""
+        if amount > 0:
+            self.__balance += amount
+            return f"✅ ${amount} added. New balance: ${self.__balance}"
+        return "❌ Invalid amount!"
+    
+    def withdraw(self, amount):
+        """Remove money with validation"""
+        if amount > 0 and amount <= self.__balance:
+            self.__balance -= amount
+            return f"✅ ${amount} withdrawn. New balance: ${self.__balance}"
+        return "❌ Insufficient balance!"
+    
+    def get_balance(self):
+        """Read-only access to balance"""
+        return self.__balance
+
+
+# Use it safely
+account = BankAccount("Ayush", 1000)
+print(account.deposit(500))      # Safe operation
+print(account.withdraw(200))     # Safe operation
+print(account.get_balance())     # 1300
+
+
+# ═════════════════════════════════════════════════════════════════════════════
+# YOUR CODE - TASK 4: BANK ACCOUNT SYSTEM
+# ═════════════════════════════════════════════════════════════════════════════
+
+"""
+YOUR CODE (EXCELLENT WORK!):
+"""
+class Bank_Account:
+    def __init__(self, user, balance):
+        self.user = user
+        self.__balance = balance  # ✅ Private
+    
+    def deposit(self, amount):
+        if amount > 0:
+            self.__balance += amount
+            return f"{amount} is added in your wallet."
+        return -1
+    
+    def widraw_money(self, amount):  # Note: typo "widraw" should be "withdraw"
+        if amount > 0:
+            self.__balance -= amount
+            return f"{amount} deducted from your wallet."
+        return -1
+    
+    def show_balance(self):
+        return f"{self.user} Your balance is: {self.__balance}"
+
+
+def main():
+    name = input("User name: ")
+    bal = int(input("Initial Balance: "))
+    acc1 = Bank_Account(name, bal)
+    
+    print("1:Add Balance\t2:Withdraw Amount\t3:Show Balance\t4:Exit")
+    while True:
+        choice = int(input("Your choice: "))
+        match choice:
+            case 1:
+                amount = int(input("balance to add: "))
+                print(acc1.deposit(amount))  # ✅ Print return value!
+            case 2:
+                amount = int(input("balance to withdraw: "))
+                print(acc1.widraw_money(amount))
+            case 3:
+                print(acc1.show_balance())
+            case 4:
+                return
+
+
+# main()  # Run this to test
+
+
+# IMPROVED VERSION:
+class BankAccount:
+    def __init__(self, user, balance):
+        self.user = user
+        self.__balance = balance
+    
+    def deposit(self, amount):
+        if amount > 0:
+            self.__balance += amount
+            return f"✅ ${amount} added. New balance: ${self.__balance}"
+        return "❌ Invalid amount!"
+    
+    def withdraw(self, amount):  # ✅ Correct spelling
+        if amount > 0 and amount <= self.__balance:
+            self.__balance -= amount
+            return f"✅ ${amount} withdrawn. New balance: ${self.__balance}"
+        return "❌ Insufficient balance!"
+    
+    def get_balance(self):
+        return self.__balance
+    
+    def transfer(self, other_account, amount):
+        """Transfer money to another account"""
+        if amount > 0 and amount <= self.__balance:
+            self.__balance -= amount
+            other_account.__balance += amount
+            return f"✅ ${amount} transferred to {other_account.user}"
+        return "❌ Transfer failed!"
+
+
+# Example usage:
+account1 = BankAccount("Ayush", 1000)
+account2 = BankAccount("Priya", 500)
+
+print(account1.deposit(500))      # ✅ $500 added. New balance: $1500
+print(account1.withdraw(200))     # ✅ $200 withdrawn. New balance: $1300
+print(account1.get_balance())     # 1300
+print(account1.transfer(account2, 100))  # ✅ $100 transferred to Priya
+print(account2.get_balance())     # 600
+
+
+# ═════════════════════════════════════════════════════════════════════════════
+# LESSON 5: INHERITANCE - REUSING CODE WITH PARENT AND CHILD CLASSES
+# ═════════════════════════════════════════════════════════════════════════════
+
+"""
+DEFINITION:
+-----------
+Inheritance allows a child class to inherit properties (attributes) 
+and methods from a parent class. It's a way to reuse code and create 
+a hierarchy of classes.
+
+TERMINOLOGY:
+- Parent Class (Base Class / Superclass): The original class being inherited from
+- Child Class (Derived Class / Subclass): The new class inheriting from parent
+
+REAL-WORLD ANALOGY:
+- Parent: Vehicle (general concept)
+- Child: Car, Bike, Truck (specific types)
+- Car inherits properties from Vehicle (wheels, engine, etc.)
+
+BENEFITS:
+- Code reuse (don't repeat code)
+- Logical hierarchy
+- Easier to maintain and extend
+"""
+
+# BASIC EXAMPLE:
+class Animal:  # Parent class
+    def __init__(self, name):
+        self.name = name
+    
+    def speak(self):
+        return f"{self.name} makes a sound"
+
+
+class Dog(Animal):  # Child class - inherits from Animal
+    pass  # Inherits everything from Animal
+
+
+# Test
+dog = Dog("Buddy")
+print(dog.speak())  # Output: Buddy makes a sound
+# The Dog class automatically has the speak() method!
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# METHOD OVERRIDING
+# ─────────────────────────────────────────────────────────────────────────────
+
+"""
+METHOD OVERRIDING: Child class replaces parent's method with its own version.
+"""
+
+class Animal:
+    def __init__(self, name):
+        self.name = name
+    
+    def speak(self):
+        return f"{self.name} makes a sound"
+
+
+class Dog(Animal):
+    def speak(self):  # ✅ Override parent method
+        return f"{self.name} says: Woof! Woof!"
+
+
+class Cat(Animal):
+    def speak(self):  # ✅ Override parent method
+        return f"{self.name} says: Meow!"
+
+
+# Test
+dog = Dog("Buddy")
+cat = Cat("Whiskers")
+
+print(dog.speak())  # Output: Buddy says: Woof! Woof!
+print(cat.speak())  # Output: Whiskers says: Meow!
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# super() - CALLING PARENT METHODS
+# ─────────────────────────────────────────────────────────────────────────────
+
+"""
+super() allows you to call the parent class's method from the child class.
+Useful when you want to extend parent functionality, not completely replace it.
+"""
+
+class Vehicle:
+    def __init__(self, brand, color):
+        self.brand = brand
+        self.color = color
+    
+    def describe(self):
+        return f"A {self.color} {self.brand}"
+
+
+class Car(Vehicle):
+    def __init__(self, brand, color, doors):
+        super().__init__(brand, color)  # ✅ Call parent __init__
+        self.doors = doors
+    
+    def describe(self):
+        parent_desc = super().describe()  # ✅ Call parent method
+        return f"{parent_desc} with {self.doors} doors"
+
+
+# Test
+car = Car("Toyota", "Red", 4)
+print(car.describe())  # Output: A Red Toyota with 4 doors
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# COMPLETE INHERITANCE EXAMPLE
+# ─────────────────────────────────────────────────────────────────────────────
+
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    
+    def get_info(self):
+        return f"Name: {self.name}, Age: {self.age}"
+
+
+class Student(Person):  # Inherits from Person
+    def __init__(self, name, age, student_id):
+        super().__init__(name, age)
+        self.student_id = student_id
+    
+    def get_info(self):
+        parent_info = super().get_info()
+        return f"{parent_info}, ID: {self.student_id}"
+
+
+class Teacher(Person):  # Also inherits from Person
+    def __init__(self, name, age, subject):
+        super().__init__(name, age)
+        self.subject = subject
+    
+    def get_info(self):
+        parent_info = super().get_info()
+        return f"{parent_info}, Subject: {self.subject}"
+
+
+# Test
+student = Student("Ayush", 20, "STU-101")
+teacher = Teacher("Mr. Smith", 45, "Python")
+
+print(student.get_info())  # Name: Ayush, Age: 20, ID: STU-101
+print(teacher.get_info())  # Name: Mr. Smith, Age: 45, Subject: Python
+
+
+# ════════════════════════════════════════════════════════════════════════════
+# COMPARISON TABLE - QUICK REFERENCE
+# ═════════════════════════════════════════════════════════════════════════════
+
+"""
+╔════════════════════════════════════════════════════════════════════════════╗
+║ CONCEPT          │ PURPOSE              │ KEY PARAMETER │ CALLED ON        ║
+╠════════════════════════════════════════════════════════════════════════════╣
+║ Instance Method  │ Work with object     │ self          │ object.method()  ║
+║ Class Method     │ Work with class      │ cls           │ Class.method()   ║
+║ Static Method    │ Utility function     │ None          │ Class.method()   ║
+║ Constructor      │ Initialize object    │ self          │ Auto (creation)  ║
+║ Private Variable │ Hide internal data   │ __ prefix     │ Via methods only ║
+║ Inheritance      │ Reuse from parent    │ super()       │ In methods       ║
+╚════════════════════════════════════════════════════════════════════════════╝
+"""
+
+# ═════════════════════════════════════════════════════════════════════════════
+# SUMMARY OF WHAT YOU'VE LEARNED
+# ═════════════════════════════════════════════════════════════════════════════
+
+"""
+✅ LESSON 1: Classes and Objects
+   - Blueprint (class) vs instances (objects)
+   - Attributes and methods
+   - Using 'self' to refer to objects
+
+✅ LESSON 2: Constructors (__init__)
+   - Automatic initialization when object is created
+   - Setting up initial values
+   - Default parameter values
+
+✅ LESSON 3: Three Types of Methods
+   - Instance methods (self) - work with individual objects
+   - Class methods (@classmethod, cls) - work with shared class data
+   - Static methods (@staticmethod) - utility functions
+
+✅ LESSON 4: Encapsulation
+   - Private variables (__variable) - hide internal data
+   - Public methods for controlled access
+   - Validation before modifying data
+
+✅ LESSON 5: Inheritance
+   - Parent and child classes
+   - Method overriding
+   - super() to call parent methods
+
+NEXT LESSONS:
+- Polymorphism
+- Abstraction
+- Special methods (__str__, __add__, etc.)
+- Decorators and properties
+- Design patterns
+"""
+
+print("\n" + "="*80)
+print("OOP NOTES COMPLETE - KEEP PRACTICING!")
+print("="*80)

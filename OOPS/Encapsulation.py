@@ -11,6 +11,8 @@ class bank_account:
     
 b1=bank_account("Ayush",1000)#1(1)
 print(b1.details())#1(2)
+# b1.user="AAYU" #1(5)
+# print(b1.details())#1(6)
 try:#1(3)
     print(f"Accessing username only: {b1.user}")  
 except BaseException:

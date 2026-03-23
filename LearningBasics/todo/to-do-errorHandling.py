@@ -1,19 +1,18 @@
 tasks=[]
-print("1:Add task\t2: Remove Task\t 3: Display-All")
-
 while True:
+    print("\n1:Add task\t2: Remove Task\t 3: Display-All")
     try:
-        choice=int(input("Enter choice: "))
+        choice=int(input("\tEnter choice: "))
     except ValueError:
-        print("Value error!")
+        print("\tValue error!")
     try:
 
         if choice==1:
             ch=1
             while ch==1:
-                task=input("Enter taks: ")
+                task=input("\tEnter taks: ")
                 tasks.append(task)
-                ch=int(input("want to add more? || Y=1  N=0"))
+                ch=int(input("\twant to add more? || Y=1  N=0 "))
                 
 
         elif choice==2:
@@ -21,18 +20,24 @@ while True:
                     print(-1)
             rm=1
             while rm==1:
-                remove=input("Enter task to remove: ")
-                if remove in tasks:
-                    tasks.pop(remove)
-                    rm=int(input("want to remove more? || Y=1  N=0"))
-                else:
-                    print("Task not in list to remove!")            
+                if len(tasks)==0:
+                        print("list empty")
+                        break
+                else: 
+                    remove=input("\tEnter task to remove: ").lower()
+                    if remove in tasks:                   
+                        tasks.remove(remove)
+                        rm=int(input("\twant to remove more? || Y=1  N=0 "))
+                    else:
+                        print("\tTask not in list to remove!") 
+                           
         elif choice==3:
             if len(tasks)==0:
-                print(-1)
+                print("list empty")
             i=1
             for t in tasks:
-                print(f"{1}: {t}")
+                print(f"{i}: {t}")
+                i+=1
         else:
             print("Enter valid choice")        
     except Exception:

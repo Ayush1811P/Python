@@ -28,13 +28,13 @@ def display():
         print(f"{i}: {t}")
         i+=1
 
-def main():
+def main()->None:
     while True:
+        print("1:Add task\t2: Remove Task\t 3: Display-All")
         try:
-            print("1:Add task\t2: Remove Task\t 3: Display-All")
             choice=int(input("Enter choice: "))
         except ValueError:
-            print("Value error!")
+            print(-1)
         if choice==1:
             ch=1
             while ch==1:    
@@ -47,4 +47,4 @@ def main():
         else:
             print(-1)        
  
-main()            
+main()
