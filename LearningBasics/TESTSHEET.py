@@ -19,31 +19,30 @@
 
 
 
+
         # Q3️⃣
 # Write a program to:
 # Take a list of integers
 # Count how many even and odd numbers are present
 # Do NOT use built-in count function
 
-
 # num=[]
-# size=int(input("Enter the size of the list: "))
-# for i in range(size):
-#     value=int(input("Enter the element: "))
-#     num.append(value)
+# print("type -1 when finished appending ")
+# while True:
+#     n=int(input("Enter number: "))
+#     if n==-1:
+#         break
+#     num.append(n)
 
 # even=0
 # odd=0
 # for i in range(len(num)):
-#     if num[i]%2==0:
-#         even=even+1
+#     if i%2==0:
+#         even+=1
 #     else:
-#         odd=odd+1
+#         odd+=1
+# print(f"Even number are: {even} odd number are: {odd}")    
 
-# print("Total even numbers are: ",even)    
-# print("Total odd numbers are: ",odd)    
-
-  
 
 
 
@@ -52,15 +51,13 @@
 # 🔹 Take a list of integers
 # 🔹 Reverse the list without using slicing
 # 🔹 Do NOT use reverse()
-
+   
 
 # list=[]
 # size=int(input("Enter the size of the list: "))
 # if size==0:
 #     print("please enter size >= 1")
-    
 # else:
-
 #     for i in range(size):
 #         value=int(input("Enter the elements: "))
 #         list.append(value)
@@ -133,9 +130,7 @@
 # print("MAX IS: ",max)             
 # print("MIN IS: ",min)             
 
-
-
-
+    
 #             Q7️⃣
 # (Functions + Binary Search)
 # Write a function binary_search(arr, target) that:

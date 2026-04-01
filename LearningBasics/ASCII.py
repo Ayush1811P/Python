@@ -40,7 +40,7 @@
 # print(ord("h"))
 
 # ch = input("Enter the character: ")
-# A=65x
+# A=65
 # Z=90
 # CH= ch.upper()
 # value=65

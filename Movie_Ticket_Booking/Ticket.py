@@ -71,5 +71,4 @@ add_movie(data, "Marvel Supermane", 300, 5)
 add_movie(data, "Batman", 200, 5)
 
 book_ticket(data, "aayu", "Avengers")
-
 save_data(data)

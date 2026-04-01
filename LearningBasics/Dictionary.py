@@ -53,7 +53,7 @@
 #     print(key)   #using loop to print all the keys in the dictionary
 
 # for key,value in student.items():
-#     print(key,value)     #using loop to print key and value together
+#     print(key,value)      #using loop to print key and value together
 
 # if student["age"]>=20:
 #     print(student.get("age"))    
