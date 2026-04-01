@@ -20,7 +20,6 @@ V1=vehicle("RED","LEMBORGINI")
 c1=car("BLUE","BMW",4)
 # print(c1.appearances())
 
-
         #PROGRAM 1
 
 class person:
