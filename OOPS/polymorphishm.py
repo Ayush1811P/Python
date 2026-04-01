@@ -15,6 +15,7 @@
 class paymentMethod:
     def pay(self,amount):
         ...
+        
 class credit_card(paymentMethod):
     def pay(self, amount):
         return f"paid ${amount} using credit card!"
