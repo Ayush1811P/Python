@@ -10,7 +10,8 @@
 # class Paytm(paymentMethod):
 #     def pay(self,amount):
 #         return f"Paid ${amount} using Paytm"    
-    
+
+
 
 class paymentMethod:
     def pay(self,amount):
@@ -32,10 +33,16 @@ paytm = Paytm()
 print(paytm.pay(2300))               
 crd=credit_card()
 print(crd.pay(4000))
+
+
+
+
 # paytm=Paytm()
 # print(paytm.pay(2000))    
 # paypal=PayPal()
 # print(paypal.pay(1000))
+
+
 
 
 class shape:
@@ -52,4 +59,9 @@ class Square(shape):
         return 4*self.side       
     
 #s1=Square()
-   
+
+
+
+
+
+
