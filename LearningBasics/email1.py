@@ -1,10 +1,10 @@
-def email_verification(email):
-    is_correct=False
+def email_verification():
+    email=input("Enter email: ")
     k,j,d,z=0,0,0,0
     if len(email)>6:#1
         if email[0].isalpha():#2
             if "@" in email and email.count("@")==1:#3
-                if (email[-3]==".") ^ (email[-4]=="."):
+                if (email[-3]==".") ^ (email[-4]=="."):#4
                     for c in email:
                         if c == c.isspace():                          
                             k=1
@@ -25,5 +25,6 @@ def email_verification(email):
                             break               
                     if c!=1 or j!=1 or d!=1 :
                            if z!=1:  
-                            is_correct=True                                
-    return is_correct
+                            True                                
+    return True
+

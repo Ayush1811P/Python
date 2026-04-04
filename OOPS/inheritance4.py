@@ -1,23 +1,23 @@
         #PROGRAM 1
 
-class vehicle:
-    def __init__(self,color,name):
-        self.color=color
-        self.name=name
-    def describe(self):
-        return f"I am {self.color} coloured {self.name}"    
-class car(vehicle):
-    def __init__(self,color,name,doors):
-        super().__init__(color,name)
-        self.doors=doors
-    def appearances (self):
-        parent_desc=super().describe()   
-        return f"{parent_desc} with {self.doors} doors"
+# class vehicle:
+#     def __init__(self,color,name):
+#         self.color=color
+#         self.name=name
+#     def describe(self):
+#         return f"I am {self.color} coloured {self.name}"    
+# class car(vehicle):
+#     def __init__(self,color,name,doors):
+#         super().__init__(color,name)
+#         self.doors=doors
+#     def appearances (self):
+#         parent_desc=super().describe()   
+#         return f"{parent_desc} with {self.doors} doors"
     
-V1=vehicle("RED","LEMBORGINI")
+#V1=vehicle("RED","LEMBORGINI")
 #print(V1.describe())    
 
-c1=car("BLUE","BMW",4)
+# c1=car("BLUE","BMW",4)
 # print(c1.appearances())
 
         #PROGRAM 1

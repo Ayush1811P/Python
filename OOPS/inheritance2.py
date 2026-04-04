@@ -32,4 +32,7 @@ class school:
 class student(school):
     ...
 
-s1=student("ayush","Student")            
+s1=student("ayush","Student")      
+s2=student("babita","cheater")
+print(s1.belongs_to())      
+print(s2.belongs_to())      

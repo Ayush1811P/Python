@@ -10,7 +10,8 @@
 #         return f"vehicle"    
 
 # obj=vehicle()
-
+# print(obj.colour())
+# print(obj.body())
 
 # class bank_account:
 #     def __init__(self,user,balance):
