@@ -1,0 +1,4 @@
+NaN(Not a Number)
+None(for object data_types)
+
+isnull()->return booleans if False then value present, True->Value missing
