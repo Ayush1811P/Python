@@ -1,0 +1,16 @@
+id,season,city,date,team1,team2,toss_winner,toss_decision,winner,result,dl_applied,win_by_runs,win_by_wickets,player_of_match,venue,umpire1,umpire2
+1,2025,Chennai,2025-03-22,Chennai Super Kings,Royal Challengers Bengaluru,Royal Challengers Bengaluru,field,Royal Challengers Bengaluru,normal,0,0,6,V Kohli,"MA Chidambaram Stadium, Chepauk",Nitin Menon,AK Chaudhary
+2,2025,Mumbai,2025-03-23,Mumbai Indians,Delhi Capitals,Delhi Capitals,field,Mumbai Indians,normal,0,29,0,RG Sharma,"Wankhede Stadium",HDPK Dharmasena,KN Ananthapadmanabhan
+3,2025,Kolkata,2025-03-24,Kolkata Knight Riders,Punjab Kings,Punjab Kings,field,Kolkata Knight Riders,normal,0,18,0,SP Narine,"Eden Gardens",CB Gaffaney,RK Illingworth
+4,2025,Ahmedabad,2025-03-25,Gujarat Titans,Rajasthan Royals,Rajasthan Royals,field,Gujarat Titans,normal,0,62,0,WP Saha,"Narendra Modi Stadium",A Nand Kishore,S Ravi
+5,2025,Hyderabad,2025-03-26,Sunrisers Hyderabad,Lucknow Super Giants,Lucknow Super Giants,field,Sunrisers Hyderabad,normal,0,10,0,MK Pandey,"Rajiv Gandhi International Stadium",VK Sharma,S Ravi
+6,2025,Bengaluru,2025-03-27,Royal Challengers Bengaluru,Mumbai Indians,Mumbai Indians,field,Royal Challengers Bengaluru,normal,0,54,0,V Kohli,"M Chinnaswamy Stadium",Nitin Menon,AK Chaudhary
+7,2025,Delhi,2025-03-28,Delhi Capitals,Chennai Super Kings,Chennai Super Kings,field,Delhi Capitals,normal,0,44,0,PP Shaw,"Arun Jaitley Stadium",HDPK Dharmasena,KN Ananthapadmanabhan
+8,2025,Jaipur,2025-03-29,Rajasthan Royals,Kolkata Knight Riders,Kolkata Knight Riders,field,Rajasthan Royals,normal,0,3,0,SV Samson,"Sawai Mansingh Stadium",CB Gaffaney,RK Illingworth
+9,2025,Lucknow,2025-03-30,Lucknow Super Giants,Punjab Kings,Punjab Kings,field,Lucknow Super Giants,normal,0,0,5,KL Rahul,"Bharat Ratna Shri Atal Bihari Vajpayee Ekana Cricket Stadium",A Nand Kishore,S Ravi
+10,2025,Pune,2025-03-31,Gujarat Titans,Sunrisers Hyderabad,Sunrisers Hyderabad,field,Gujarat Titans,normal,0,0,7,HH Pandya,"Maharashtra Cricket Association Stadium",VK Sharma,S Ravi
+11,2025,Chennai,2025-04-01,Chennai Super Kings,Mumbai Indians,Mumbai Indians,field,Chennai Super Kings,normal,0,20,0,MS Dhoni,"MA Chidambaram Stadium, Chepauk",Nitin Menon,AK Chaudhary
+12,2025,Kolkata,2025-04-02,Kolkata Knight Riders,Delhi Capitals,Delhi Capitals,field,Kolkata Knight Riders,normal,0,0,8,AD Russell,"Eden Gardens",HDPK Dharmasena,KN Ananthapadmanabhan
+13,2025,Ahmedabad,2025-04-03,Gujarat Titans,Royal Challengers Bengaluru,Royal Challengers Bengaluru,field,Gujarat Titans,normal,0,35,0,Shubman Gill,"Narendra Modi Stadium",CB Gaffaney,RK Illingworth
+14,2025,Hyderabad,2025-04-04,Sunrisers Hyderabad,Rajasthan Royals,Rajasthan Royals,field,Sunrisers Hyderabad,normal,0,7,0,DA Warner,"Rajiv Gandhi International Stadium",A Nand Kishore,S Ravi
+15,2025,Dharamsala,2025-04-05,Punjab Kings,Lucknow Super Giants,Lucknow Super Giants,field,Punjab Kings,normal,0,0,6,LS Livingstone,"Himachal Pradesh Cricket Association Stadium",VK Sharma,S Ravi
