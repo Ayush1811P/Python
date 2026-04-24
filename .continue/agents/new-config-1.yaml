@@ -1,0 +1,10 @@
+name: Local Setup
+version: 1.0.0
+schema: v1
+
+models:
+  - name: DeepSeek Local
+    provider: ollama
+    model: deepseek-coder:1.3b
+
+mcpServers: []

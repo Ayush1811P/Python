@@ -268,3 +268,24 @@
 
 
  
+
+# from inspect import istraceback
+
+# from f import email_verification
+# username=input("Enter email: ")
+# isTrue=email_verification(username)
+
+# if isTrue==True:
+#     print("correct email")
+# else:
+#     print("Fail")
+
+
+import random
+
+
+lst=['A','B','C','D','E']
+for i in range(5):    
+        choice=random.choice(lst)
+        print(choice)
+

@@ -1,0 +1,9 @@
+Total Runs = SUM(deliveries[total_runs])
+
+Total Matches = DISTINCTCOUNT(matches[id])
+
+Total Wins = COUNT(matches[winner])
+
+Strike Rate = DIVIDE(SUM(deliveries[batsman_runs]), COUNT(deliveries[ball])) * 100
+
+Toss Impact = CALCULATE(COUNTROWS(matches), matches[toss_winner] = matches[winner])

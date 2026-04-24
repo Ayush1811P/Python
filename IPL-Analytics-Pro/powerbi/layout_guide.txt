@@ -1,0 +1,26 @@
+POWER BI DASHBOARD LAYOUT
+
+Top: Title Bar
+Below: KPI Cards (4)
+
+Left Panel:
+- Season Filter
+- Team Filter
+- Player Filter
+- Venue Filter
+
+Center:
+- Top Batsmen (Bar)
+- Top Bowlers (Bar)
+- Toss Impact (Donut)
+- Team Wins (Column)
+
+Bottom:
+- Runs Distribution
+- Venue Analysis
+
+Theme Colors:
+Primary: #0B3D91
+Secondary: #00A86B
+Highlight: #F4C430
+Background: #121212
