@@ -4,22 +4,29 @@
     
 
 
-# def gteet(name="guest"):
-#     print("Hello",name)
+# def gteet(name):
+#     return "Hello",name+" "+"30"
 
-# result=gteet("Aayuu")  
+# print(gteet("Aayuu") ) 
 
 
 
 
 # def square(n):
 #     return n * n
-# result=square(5)
+# result=square(50)
 # print(result)
 
 
+# def even(*num):
+#     for i in num:
+#         if i%2==0:
+#                 print ("Even number ")
+#         else:
+#                 print ("ODD Number")
 
 
+#print(even(12,23,24))
         #1️⃣ Write a function to check even or odd
 # def odd_even(*nums):
     
@@ -35,19 +42,18 @@
 
 
 
-#2️⃣ Write a function that returns maximum of 3 numbers
-# def max(a,b,c):
-#     max=0
-#     if a > b and a>c:
-#         max=a
-#     elif b>a and b>c:
-#         max=b
-#     else:
-#         max=c        
-#     return max    
+# 2️⃣ Write a function that returns maximum of 3 numbers
+def maximum(a,b,c):
+    if a > b and a>c:
+        return "a"
+    elif b>a and b>c:
+        return "b"
+    else:
+        return "c"        
+       
 
-# result=max(12,15,14)
-# print(result)
+result=maximum(12,15,14)
+print(result)
 
 
 #3️⃣ Use *args to add unlimited numbers
