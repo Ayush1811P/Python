@@ -7,6 +7,20 @@
 
 
 
+# list=[1,2,3,4,5,6,7,8,9,10]
+# #odd_only=[n for n in list if n%3==0]
+# # answer={n: n*n*n for n in numbers}
+# ODD=[n*2 #1
+#      if n%2!=0  #2
+#        else "FIZZ" #3
+#        for n in list #4
+#        ]
+# print(ODD)
+
+
+#[i for i list if i%3==0]
+
+#LIST COMPREHENTION
         #PROBLEM 2 👉 Separate integers and strings from a mixed list
 
 # arr=[1, "a", 2, "b", 3]
@@ -95,24 +109,61 @@
 # print(my_list)            
 
 
-nums=[1,2,3,4,5,6,7,8,9,10]
-odds_only=[n for n in nums if n%2!=0]
-print(odds_only)
-print()
+# nums=[1,2,3,4,5,6,7,8,9,10]
+# odds_only=[n for n in nums if n%2!=0]
+# print(odds_only)
+# print()
 
-words=["apple","banana","kiwi","fig","mango"]
-result=[w.upper() for w in words if len(w)>4]
-print(result)
-print()
-
-
-numbers=[1,2,3,4,5]
-answer={n: n*n*n for n in numbers}
-print(answer)
-print()
+# words=["apple","banana","kiwi","fig","mango"]
+# result=[w.upper() for w in words if len(w)>4]
+# print(result)
+# print()
 
 
-words="Hello World Python"
-words=words.split()
-Result2=[len(w) for w in words]
-print(Result2)
+# numbers=[1,2,3,4,5]
+# answer={n: n*n*n for n in numbers}
+# print(answer)
+# print()
+
+
+# words="Hello World Python"
+# words=words.split()
+# Result2=[len(w) for w in words]
+# print(Result2)
+
+
+
+
+
+# list=["A",20,"b","c",45,65,"DD",3,4,"df"]
+# #N = 45 isinstance(n,int)=True
+# integers_only=[n for n in list if isinstance(n,int)]#[X <-20  X X <- 45 <- 65 X <- 3  <-4 X] endlist
+# print(integers_only)                         #n #int
+
+
+
+
+
+
+
+
+
+
+# A="     Ayush     ".lower().strip()
+# b="Singh".upper()
+
+# user="AyusH"
+# print(user)
+# pp=1881  
+# def login(username,pin):
+#     if username==user.upper() and pp==pin:
+#         print("LOGGED IN")
+#     else:
+#         print("Error")    
+#     return
+# u=input("Enter username: ").upper()
+# p=int(input("Enter pin: "))
+# login(u,p)    
+
+
+
