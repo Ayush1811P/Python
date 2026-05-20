@@ -1,0 +1,378 @@
+import pandas as pd
+
+#READING DATA FROM CSV FILE INTO A DATA_FRAME
+
+    #CSV
+# df=pd.read_csv("sales_data_sample.csv",encoding='latin1')
+# print(df)
+
+
+        #EXCEL
+# df=pd.read_excel("SampleSuperstore.xlsx")
+# print(df)
+
+        #JSON   
+df=pd.read_json("sample_Data.json")
+print(df)
+
+
+#head() tail()
+#head(n) if n not passed then default first 5 rows will be shown
+#tail(n)if n not passed then default last 5 rows will be shown
+
+import pandas as pd
+df=pd.read_json("sample_Data.json")
+
+
+print("Display 10 rows of first")
+print(df.head(10))
+
+
+
+print("----"*30)
+
+
+print("Display 10 rows of last")
+print(df.tail(10))
+
+
+
+import pandas as pd
+from describe import data
+#df=pd.read_json("sample_Data.json")
+# print("Displayinf the info or dataset")
+# print(df.info())
+
+
+# data={
+#     "Name":["Ayush","Babita","Rohan"],
+#     "Age":[10,30,40],
+#     "City":["Delhi","Noida","UK"]
+# }
+
+df=pd.DataFrame(data)
+print("Displayinf the info or dataset")
+print(df.info())
+
+
+
+
+import pandas as pd
+data={
+    "Name":["Ayush","Babita","Rohan","Ajay","Annu","Jaggu","Oggy","Paplu"],
+    "Age":[32,20,30,54,56,30,18,14],
+    "Salary":[50000,40000,60000,34000,32000,1000,30000,450000],
+    "P_S":[85,90,78,92,88,95,80,89]
+}
+df=pd.DataFrame(data)
+# print("Sample data frame")
+# print(df)
+
+print("Descriptive Statistics")
+print(df.describe())
+
+
+
+
+import pandas as pd
+from describe import data
+df=pd.DataFrame(data)
+
+
+   # PRINTS WHOLE DATAfRAME
+#print("Sample DataFrame")
+#print(df)
+
+
+        #ACCESSING SINGLE COLUMN
+# print("NAMES (Single column return series)")
+# print(df["Name"])
+
+        #ACCESSING SINGLE COLUMN
+# subsets=df[["Name","Salary"]]       
+# print(subsets)
+
+
+
+
+
+import pandas as pd
+from describe import data
+df=pd.DataFrame(data)
+
+        #applying single condition on rows
+# high_salary=df[df["Salary"] > 50000]
+# print("HIGH SALARY > 50000")
+# print(high_salary)
+
+        #applying multiple condition on rows
+        #salary>50k & age>30
+age_salary=df[(df["Age"]>40) & (df["Salary"]>50000)]
+#print("EMPLOYEE WHERE AGE AND SALAY FILTERED")
+#print(age_salary)
+
+        #applying multiple condition on rows
+        #salary>50k or age>30
+using_or_condition=df[(df["Age"]>0) | (df["P_S"]>90)]        
+print(using_or_condition)
+
+
+
+
+
+import pandas as pd
+from describe import data
+df=pd.DataFrame(data)
+#print(df)
+print("Shape is: ",df.shape)
+print("Column Names: ",df.columns)
+
+
+
+import pandas as pd
+from values import data
+df=pd.DataFrame(data)
+# print(df)
+
+
+# print("]\nAfter bonus addition!")
+# print("*"*30)
+df["Bonus"]=df["Salary"]*0.1
+# print(df)
+
+#USING INSERT METHOD TO ADD COLUMN AT SPECIFIT INDEX NUMBER IN THE TABLE
+
+    #SYNTAX
+#df.insert(loc, " col_name",some_data)
+df.insert(0,"Emp_id", [12,13,14,15,17,18,19,20])
+print(df)
+
+
+
+
+
+import pandas as pd
+from values import data
+df=pd.DataFrame(data)
+print("\n******************ORIGINAL DATA******************\n")
+print(df)
+print("\n******************MODIFIED COLUMN DATA******************\n")
+#df.drop(columns=["Column_name"],inplace=True)
+df.drop(columns=["P_S"],inplace=True)
+print(df)
+
+#if drop multiple columns
+#df.drop(columns=["P_S","Age"],inplace=True)
+
+
+
+
+
+import pandas as pd
+from values import data
+df=pd.DataFrame(data)
+
+
+
+#updation for row specific
+#syntax:  #df.loc[roe_index,col_name]=new_value
+df.loc[0,"Salary"]=100000
+print(df)
+
+
+
+
+print("\n\tAfter updation of salary by 5%\n")
+#INCREASING SALARY BY 5%
+df["Salary"]=df["Salary"]*1.05
+print(df)
+
+
+import pandas as pd
+from values import data
+df=pd.DataFrame(data)
+        #DROP MISSING DATA
+#dropna()
+
+
+#df.dropna(axis=0, inplace=True)#->axis=0 means drop rows,axis=1 means drop column
+#print(df)
+
+
+
+
+import pandas as pd
+from values import data
+df=pd.DataFrame(data)
+
+
+        #NOW INSTEAD OF DROPING LETS FILL THE NULL VALUES
+#df.fillna(default_value,inplace=True)
+#df.fillna(0, inplace=True)
+df["Age"].fillna(df["Age"].mean(),inplace=True)
+print(df)
+
+
+
+import pandas as pd
+"""WHY USING INTERPOLATION
+ 1-PRESERVE DATA INTEGRETY
+ 2-SMOOTH TREND
+ 3-WORKS ON INTEGER DATA_COL
+ 4-AVOID DATA LOSS"""
+
+
+data={
+    "Name":["Ayush","Babita","Rohan","Ajay","Annu","Jaggu","Oggy","Paplu"],
+    "Age":[32,20,30,54,56,30,18,14],
+    "Salary":[50000,40000,60000,34000,32000,1000,30000,450000],
+    "P_S":[85,90,78,92,88,95,80,89]
+}
+df=pd.DataFrame(data)
+#linear method, polynomial, time
+new_df=df.interpolate(method="linear",axis=0)
+
+
+import pandas as pd
+data={
+    "Time":[1,2,3,4,5],
+    "Values":[10,20,30,None,50]
+}
+df=pd.DataFrame(data)
+print("**************BEFORE INTERPOLATION**************")
+print(df)
+print("\n**************BEFORE INTERPOLATION**************\n")
+df["Values"]=df["Values"].interpolate(method="linear")
+print(df)
+
+
+
+
+
+import pandas as pd
+from values import data
+df=pd.DataFrame(data)
+#print(df.isnull())
+print(df.isnull().sum())
+
+
+
+"""SYNTAX
+pd.merge(dataFrame1, dataFrame2, on="col_name",how="tye-of-join")
+"""
+import pandas as pd
+df_customer=pd.DataFrame({
+    "Customer_id":[1,2,3],
+    "Name":["Ayush","babita","Babbu"]
+})
+
+df_orders=pd.DataFrame({
+    "Customer_id":[1,2,5],
+    "Order_amount":[24,34,145]
+})
+
+#merging dataframes=
+
+        #INNER JOIN
+df_inner=pd.merge(df_customer,df_orders,on="Customer_id",how="inner")
+#print(df_inner)
+
+
+        #OUTER JOIN
+df_Outer=pd.merge(df_customer,df_orders,on="Customer_id",how="outer")
+#print(df_Outer)
+
+        #LEFT JOIN
+df_left=pd.merge(df_customer,df_orders,on="Customer_id",how="left")
+#print(df_left)
+
+
+        #Right JOIN
+df_right=pd.merge(df_customer,df_orders,on="Customer_id",how="right")
+#print(df_right)
+
+
+        #CROSS JOIN
+df_cross=pd.merge(df_customer,df_orders,how="cross")
+print(df_cross)
+
+
+
+
+#Summary Statastics
+from sorting import data
+import pandas as pd
+#.mean(), .mode(), .max(), .min(), .sum()
+df=pd.DataFrame(data)
+
+
+
+avg_salary=df["Salary"].mean()
+print(avg_salary)
+
+
+
+import pandas as pd
+data={
+    "Name":["Ayush","Babita","Aayu"],
+    "Age":[23,45,32],
+    "Salary":[45000,56000,34000]
+}
+df=pd.DataFrame(data)
+
+#get age as decs order
+descending_age=df.sort_values(by="Age",ascending=False)
+#print("**************Sorted by age**************")
+#print(descending_age)
+
+
+#get age as asc order
+asc_age=df.sort_values(by="Age",ascending=True)
+#print("**************Sorted by age**************")
+#print(asc_age)
+
+
+#for multiply column sorting
+print(df.sort_values(by=["Age","Salary"],ascending=[True,False]))
+                                                                
+
+
+data={
+    "Name":["Ayush","Babita","Rohan","Ajay","Annu","Jaggu","Oggy","Paplu"],
+    "Age":[32,20,32,54,14,32,14,14],
+    "Salary":[50000,40000,60000,34000,32000,1000,30000,450000],
+    "P_S":[85,90,78,92,88,95,80,89]
+}
+"""COMMON AGGREGATION FUNCTIONS
+1-sum()
+2-count()
+3-min()
+4-max()
+5-std()
+6-mean()
+"""
+import pandas as pd
+df=pd.DataFrame(data)
+    #SYNTAX
+#group = df.groupby("COLNAME TO MAKE GROUP ")["COL NAME TO RETURN"].AGGREGATION()
+grouped=df.groupby("Age")["Salary"].sum()
+#print( grouped )
+
+count=df.groupby("Age")["Salary"].count()
+#print(count)
+
+
+
+
+
+    #multiple columns grouping
+
+mul_groupled =df.groupby(["Age","Name"])["Salary"].sum()
+print(mul_groupled)
+
+
+
+
+
+
+

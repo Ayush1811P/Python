@@ -43,17 +43,17 @@
 
 
 # 2️⃣ Write a function that returns maximum of 3 numbers
-def maximum(a,b,c):
-    if a > b and a>c:
-        return "a"
-    elif b>a and b>c:
-        return "b"
-    else:
-        return "c"        
+# def maximum(a,b,c):
+#     if a > b and a>c:
+#         return "a"
+#     elif b>a and b>c:
+#         return "b"
+#     else:
+#         return "c"        
        
 
-result=maximum(12,15,14)
-print(result)
+# result=maximum(12,15,14)
+# print(result)
 
 
 #3️⃣ Use *args to add unlimited numbers
@@ -226,4 +226,71 @@ print(result)
 #     return total
 
 # print(add_all(1,2,3,4,5))    
+
+# def add():
+#     return 10+20
+
+# print(add())
+
+"""
+STEP1: DEF 
+STEP 2 FUNC NAME
+STEP 3()
+STEP 4(PARAMETER)#OPTIONAL
+STE5 (PRAMETERS,PARAMETER2)#OPTIONAL
+STEP6():
+    INDENTATION
+STEP 7 RETURN/PRINT
+PROFESSIONAL CODE RETURN
+PRINT -> WHEN WE NEED TO KNOW THAT FUNCTION IS ACTUALLY PERFORMING WELL OR NOT    
+
+"""
+
+# def even_odd(n):
+#      ise_even=False
+#      if n%2==0:
+#           ise_even=True
+#      else:
+#           ise_even=False
+
+#      return ise_even  
+
+   
+# print(even_odd(12))          
+# S="ayush Python"
+# V="aeiou"
+
+# con=[]
+# vowel=""
+# for i in S:
+#     if i in V:
+#         vowel+=i
+
+#     else:
+#         con.append(i)   
+# print("Vowels ", vowel)
+# print("consonents ", con)
+
+S="i am learning python"
+Words=S.split()
+R=""
+for i in range(len(S)-1,-1,-1):
+    R += S[i]
+
+    
+
+print(R)
+# for w in S:
+#     R+=w[-1]
+# print(R)    
+"""
+
+CALCULATOR USING FUNCTIONS
+ADD
+SUB
+MUL
+DIV
+
+"""
+#default arguments
 
