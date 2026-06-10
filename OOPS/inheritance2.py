@@ -1,3 +1,14 @@
+from email import reg
+def login():
+    R=reg()
+    U=R.user
+    
+    print(U )
+
+print(login())  
+
+
+
 # class School:
 #     def __init__(self,name,occupation):
 #         self.name=name

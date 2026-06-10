@@ -71,16 +71,16 @@
 #         lst.insert(idx,num,idx,num)
 #         break
 # print(lst)
-import random
+# import random
 
-password=0
+# password=0
 
-password=random.randint(111,999)
-char="abcdefghijklmnopqrstuvwxyz"
-for i in range(3):
-    password=str(password)+random.choice(char)
+# password=random.randint(111,999)
+# char="abcdefghijklmnopqrstuvwxyz"
+# for i in range(3):
+#     password=str(password)+random.choice(char)
 
-print(password)
+# print(password)
 
 
 
@@ -373,3 +373,88 @@ print(password)
 # print("Prev: ",S,"\nAfter: ",S2,"\nDigits: ",S3)        
 
 
+# def first_unique_word(sentence):
+#     freq={}
+#     for ch in sentence.split():
+#         if ch in freq:
+#             freq[ch]+=1
+#         else:
+#             freq[ch]=1
+#     for keys,values in freq.items():
+#         if values==1:
+#             return f"First Unique sentense is : {keys}"
+#     return f"no unique item found!"        
+
+# print(first_unique_word("this this is is a a test test"))
+
+
+       # QUESTION 1
+# def product_except_self(nums):
+#     res=[]
+#     curr=0
+#     val=1
+#     while curr<len(nums):
+#         for j in range(len(nums)):
+#             if j!=curr:
+#                 val=val*nums[j]
+#         res.append(val)
+#         val=1
+#         curr+=1        
+#     return res
+
+# print( product_except_self([2,2,2,3,4]))
+
+
+
+    # QUESTION 2
+# def top_k_frequent(nums,k):
+#     freq={}
+#     res=[]
+#     for i in nums:
+#         if i in freq:
+#             freq[i]+=1
+#         else:
+#             freq[i]=1
+#     freq=dict(sorted(freq.items(), key = lambda item: item[1],reverse=True))
+#     i=1
+#     for key,value in freq.items():
+#         res.append(value)
+#         if i==k:
+#             break
+#         i+=1
+#     return res
+    
+# print(top_k_frequent([3,4,1,1,1,1,2,2,2,2,2,1,2],2))   
+
+
+
+
+        # QUESTION 3
+# def first_missing_positive(nums):
+#     positive=1
+#     nums=sorted(nums)
+#     for i in nums:
+#         if i==positive:
+#             positive+=1
+        
+#     return print("the first positive number missing is ",positive)
+            
+
+# first_missing_positive([-1,1,3,4,5,7])
+
+
+# a=[5,3,8,3,9,3]
+# a.remove(3)
+# x=a.pop(2)
+# a.append(x + 1)
+# print(a)
+# print(len(a))
+
+
+
+# a=int(input("Enter number: "))
+# b=int(input("to find percentage:  "))
+# c=a//10
+# d=b//10
+# percentage=c*d
+# print(f"{b} Percentage of {a} is ->{percentage}")

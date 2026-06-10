@@ -3,14 +3,16 @@ class Animal:
         self.name=name
         self.color=color
     def voice(self):
-        return f"i am {self.name} and my color is {self.color}"
+        return f"i am {self.name} and my color is {self.color} babbu is my DOST"
 
 class dog(Animal):
     def voice(self):
         return f"i am dog,{self.color} in color"        
 
 class cat(Animal):
-    ...
+    pass
+
+
 
 class cow(Animal):
     def __init__(self, name,color,nic_name):
